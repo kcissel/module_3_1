@@ -3,15 +3,11 @@ def count_calls():
     global calls
     calls += 1
 def string_info(string):
-    string = (len(string), string.upper(), string.lower())
-    print(string)
-    return count_calls()
-def is_contains(string, list_to_search):
-    if string in list_to_search:
-        print(True)
-    else:
-        print(False)
-    return count_calls()
+    count_calls()
+    return (len(string), string.upper(), string.lower())
+def is_contains (string, list_to_search):
+    count_calls()
+    return string.upper() in [s.upper() for s in list_to_search]
 
 
 print(string_info('Paramedic'))
